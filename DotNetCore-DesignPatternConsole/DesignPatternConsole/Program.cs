@@ -1,4 +1,5 @@
-﻿using DesignPatternConsole.Strategy;
+﻿using DesignPatternConsole.Adapter;
+using DesignPatternConsole.Strategy;
 using DesignPatternConsole.Template;
 using System;
 
@@ -37,6 +38,25 @@ namespace DesignPatternConsole
             #endregion
 
             Console.WriteLine("----------------------");
+
+            #region Facade
+            Console.WriteLine("Facade Pattern:");
+            Facade.FacadeClass fc = new Facade.FacadeClass();
+            fc.CompleteProcess();
+            #endregion
+
+            Console.WriteLine("----------------------");
+
+
+            #region Adapter
+            Console.WriteLine("Adapter Pattern:");
+            AdapteeDrink adaptee = new AdapteeDrink();
+            ChefAdapter target = new ChefAdapter(adaptee);
+            target.AdaptFoodsAndDrinks();
+            #endregion
+
+            Console.WriteLine("----------------------");
+
 
             Console.ReadKey();
 
