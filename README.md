@@ -1,4 +1,4 @@
-# Design-Patterns-DotnetCore-Golang
+# Design-Patterns-DotnetCore
 
 Some examples of Design patters in C#. I gather this examples during time and they will get updated from time to time.
 
