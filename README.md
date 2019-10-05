@@ -4,5 +4,7 @@ Some examples of Design patters in C#. I gather this examples during time and th
 
 Current Design Patterns:
 - Strategy Design Pattern
-- Factory Design Patter
-- Template Design Patter
+- Factory Design Pattern
+- Template Design Pattern
+- Facade Design Pattern
+- Adapter Design Pattern
