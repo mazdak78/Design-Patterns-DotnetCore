@@ -1,4 +1,5 @@
 ﻿using DesignPatternConsole.Adapter;
+using DesignPatternConsole.Patterns.Singleton;
 using DesignPatternConsole.Strategy;
 using DesignPatternConsole.Template;
 using System;
@@ -28,7 +29,7 @@ namespace DesignPatternConsole
 
             Console.WriteLine("----------------------");
 
-            #region Strategy With Template 
+            #region Template 
             Console.WriteLine("Template Pattern:");
             StripeCustomer sc = new StripeCustomer();
             sc.CreateCustomer();
@@ -53,6 +54,15 @@ namespace DesignPatternConsole
             AdapteeDrink adaptee = new AdapteeDrink();
             ChefAdapter target = new ChefAdapter(adaptee);
             target.AdaptFoodsAndDrinks();
+            #endregion
+
+            Console.WriteLine("----------------------");
+
+            #region Singleton
+            Console.WriteLine("Singleton Pattern:");
+            var configs = SingletonContainer.Instance;
+            Console.WriteLine(configs.GetConfig("Config 1"));
+            Console.WriteLine(configs.GetConfig("Config 2"));
             #endregion
 
             Console.WriteLine("----------------------");
