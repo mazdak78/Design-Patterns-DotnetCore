@@ -8,3 +8,4 @@ Current Design Patterns:
 - Template Design Pattern
 - Facade Design Pattern
 - Adapter Design Pattern
+- Singleton Design Pattern
