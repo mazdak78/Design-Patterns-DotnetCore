@@ -1,4 +1,5 @@
 ﻿using DesignPatternConsole.Adapter;
+using DesignPatternConsole.Patterns.Builder;
 using DesignPatternConsole.Patterns.Singleton;
 using DesignPatternConsole.Strategy;
 using DesignPatternConsole.Template;
@@ -63,6 +64,25 @@ namespace DesignPatternConsole
             var configs = SingletonContainer.Instance;
             Console.WriteLine(configs.GetConfig("Config 1"));
             Console.WriteLine(configs.GetConfig("Config 2"));
+            #endregion
+
+            Console.WriteLine("----------------------");
+
+            #region Builder
+            Console.WriteLine("Builder Pattern:");
+            ChefDirector cd = new ChefDirector();
+
+            SteakBuilder sb = new SteakBuilder();
+            cd.MixMaterials(sb);
+
+            sb.GetFood().Cook();
+
+            PastaBuilder pb = new PastaBuilder();
+            cd.MixMaterials(pb);
+
+            pb.GetFood().Cook();
+
+
             #endregion
 
             Console.WriteLine("----------------------");
