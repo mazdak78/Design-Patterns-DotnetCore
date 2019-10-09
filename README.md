@@ -1,6 +1,6 @@
 # Design-Patterns-DotnetCore
 
-Some examples of Design patterns in C#. I gather this examples during time and they will get updated from time to time.
+Some examples of Design patterns in C#. I gather these examples during time and they will get updated from time to time.
 
 Current Design Patterns:
 - Strategy Design Pattern
@@ -8,3 +8,4 @@ Current Design Patterns:
 - Template Design Pattern
 - Facade Design Pattern
 - Adapter Design Pattern
+- Singleton Design Pattern
