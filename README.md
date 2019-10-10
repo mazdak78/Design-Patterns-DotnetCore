@@ -10,3 +10,5 @@ Current Design Patterns:
 - Adapter Design Pattern
 - Singleton Design Pattern
 - Builder Design Pattern
+- Command Design Pattern
+- Command-Factory Pattern
