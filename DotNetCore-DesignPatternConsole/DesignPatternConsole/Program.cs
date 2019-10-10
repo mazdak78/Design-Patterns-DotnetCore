@@ -1,5 +1,7 @@
 ﻿using DesignPatternConsole.Adapter;
 using DesignPatternConsole.Patterns.Builder;
+using DesignPatternConsole.Patterns.Command;
+using DesignPatternConsole.Patterns.CommandFactory;
 using DesignPatternConsole.Patterns.Singleton;
 using DesignPatternConsole.Strategy;
 using DesignPatternConsole.Template;
@@ -82,6 +84,35 @@ namespace DesignPatternConsole
 
             pb.GetFood().Cook();
 
+
+            #endregion
+
+            Console.WriteLine("----------------------");
+
+            #region Command
+            Console.WriteLine("Command Pattern:");
+            IInformable informable = new Informable();
+
+            ICommand commandGroup1 = new InformGoup1Command(informable);
+            ICommand commandGroup2 = new InformGoup2Command(informable);
+
+            Informer informer = new Informer(commandGroup1, commandGroup2);
+
+            informer.InformGoup1();
+            informer.InformGoup2();
+
+            #endregion
+
+            Console.WriteLine("----------------------");
+
+            #region Command-Factory
+            Console.WriteLine("Command-Factory:");
+            var factory = new CommandFactory();
+            var command = factory.GetCommand("Command A");
+            command.Execute();
+
+            command = factory.GetCommand("Command B");
+            command.Execute();
 
             #endregion
 
