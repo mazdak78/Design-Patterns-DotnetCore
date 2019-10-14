@@ -2,6 +2,7 @@
 using DesignPatternConsole.Patterns.Builder;
 using DesignPatternConsole.Patterns.Command;
 using DesignPatternConsole.Patterns.CommandFactory;
+using DesignPatternConsole.Patterns.Proxy;
 using DesignPatternConsole.Patterns.Singleton;
 using DesignPatternConsole.Strategy;
 using DesignPatternConsole.Template;
@@ -118,6 +119,18 @@ namespace DesignPatternConsole
 
             Console.WriteLine("----------------------");
 
+
+            #region Proxy
+            Console.WriteLine("Proxy:");
+            ProxyCustomer proxy = new ProxyCustomer(new CustomerBalance(1000));
+            proxy.DoAccounting();
+
+            proxy = new ProxyCustomer(new CustomerBalance(-10));
+            proxy.DoAccounting();
+
+            #endregion
+
+            Console.WriteLine("----------------------");
 
             Console.ReadKey();
 
