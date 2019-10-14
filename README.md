@@ -12,3 +12,4 @@ Current Design Patterns:
 - Builder Design Pattern
 - Command Design Pattern
 - Command-Factory Pattern
+- Proxy Pattern
