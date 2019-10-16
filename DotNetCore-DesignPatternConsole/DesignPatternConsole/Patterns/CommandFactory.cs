@@ -28,6 +28,4 @@ namespace DesignPatternConsole.Patterns.CommandFactory
             return command();
         }
     }
-
-
 }

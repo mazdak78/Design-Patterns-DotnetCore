@@ -63,6 +63,4 @@ namespace DesignPatternConsole.Facade
             _post.CreatePost("10 tips about Microsoft Azure,");
         }
     }
-
-
 }

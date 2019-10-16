@@ -49,7 +49,4 @@ namespace DesignPatternConsole.Patterns.Proxy
         }
     }
 
-
-
-
 }
