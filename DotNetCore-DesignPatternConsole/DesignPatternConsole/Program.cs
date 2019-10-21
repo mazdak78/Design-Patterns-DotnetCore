@@ -132,6 +132,18 @@ namespace DesignPatternConsole
 
             Console.WriteLine("----------------------");
 
+            #region Decorator
+            Console.WriteLine("Decorator:");
+            Decorator.PostCreator postCreator = new Decorator.PostCreator();
+            postCreator.CreatePost();
+
+            Decorator.PostCreator postCreatorWithBalance = new Decorator.PostCreatorWithBalanceChecker(-10);
+            postCreatorWithBalance.CreatePost();
+
+            #endregion
+
+            Console.WriteLine("----------------------");
+
             Console.ReadKey();
 
         }
