@@ -2,6 +2,7 @@
 using DesignPatternConsole.Patterns.Builder;
 using DesignPatternConsole.Patterns.Command;
 using DesignPatternConsole.Patterns.CommandFactory;
+using DesignPatternConsole.Patterns.Observer;
 using DesignPatternConsole.Patterns.Proxy;
 using DesignPatternConsole.Patterns.Singleton;
 using DesignPatternConsole.Strategy;
@@ -140,6 +141,22 @@ namespace DesignPatternConsole
             Decorator.PostCreator postCreatorWithBalance = new Decorator.PostCreatorWithBalanceChecker(-10);
             postCreatorWithBalance.CreatePost();
 
+            #endregion
+
+            Console.WriteLine("----------------------");
+
+            #region Observer
+            Console.WriteLine("Observer Pattern:");
+
+            EntityNotifier nf = new EntityNotifier();
+            CustomerObserverA coa = new CustomerObserverA();
+            nf.Subscribe(coa);
+
+            CustomerObserverB cob = new CustomerObserverB();
+            nf.Subscribe(cob);
+
+            nf.ScanData();
+            
             #endregion
 
             Console.WriteLine("----------------------");
