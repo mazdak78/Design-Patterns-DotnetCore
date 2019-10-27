@@ -2,15 +2,24 @@
 
 Some examples of Design patterns in C#. I gather these examples during time and they will get updated from time to time.
 
-Current Design Patterns:
-- Strategy Design Pattern
+
+## Current Design Patterns:
+
+### Creational patterns
 - Factory Design Pattern
-- Template Design Pattern
-- Facade Design Pattern
-- Adapter Design Pattern
 - Singleton Design Pattern
 - Builder Design Pattern
-- Command Design Pattern
-- Command-Factory Design Pattern
+
+### Structural patterns
+- Facade Design Pattern
+- Adapter Design Pattern
 - Proxy Design Pattern
 - Decorator Design Pattern
+
+### Behavioral patterns
+- Template Design Pattern
+- Command Design Pattern
+- Strategy Design Pattern
+
+### Others
+- Command-Factory Design Pattern
