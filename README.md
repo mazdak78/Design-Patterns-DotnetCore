@@ -11,5 +11,6 @@ Current Design Patterns:
 - Singleton Design Pattern
 - Builder Design Pattern
 - Command Design Pattern
-- Command-Factory Pattern
-- Proxy Pattern
+- Command-Factory Design Pattern
+- Proxy Design Pattern
+- Decorator Design Pattern
