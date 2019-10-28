@@ -20,6 +20,7 @@ Some examples of Design patterns in C#. I gather these examples during time and 
 - Template Design Pattern
 - Command Design Pattern
 - Strategy Design Pattern
+- Observer Design Pattern
 
 ### Others
 - Command-Factory Design Pattern
