@@ -1,4 +1,5 @@
 ﻿using DesignPatternConsole.Adapter;
+using DesignPatternConsole.COR;
 using DesignPatternConsole.Patterns.Builder;
 using DesignPatternConsole.Patterns.Command;
 using DesignPatternConsole.Patterns.CommandFactory;
@@ -157,6 +158,40 @@ namespace DesignPatternConsole
 
             nf.ScanData();
             
+            #endregion
+
+            Console.WriteLine("----------------------");
+
+            #region Chain of responsibility
+            Console.WriteLine("Chain of responsibility Pattern:");
+
+            HeadEditor editor = new HeadEditor();
+            HeadAccounter accounter = new HeadAccounter();
+            HeadManager manager = new HeadManager();
+            
+
+            //here is the chain
+            editor.SetSuperVisor(accounter);
+            accounter.SetSuperVisor(manager);
+
+            CustomerBalanceRequest request = new CustomerBalanceRequest();
+            request.Balance = 3000;
+            request.CustomerName = "John Doe";
+
+            editor.Handle(request);
+
+            request = new CustomerBalanceRequest();
+            request.Balance = 7000;
+            request.CustomerName = "Jared";
+
+            editor.Handle(request);
+
+            request = new CustomerBalanceRequest();
+            request.Balance = 100;
+            request.CustomerName = "Maz";
+
+            editor.Handle(request);
+
             #endregion
 
             Console.WriteLine("----------------------");
