@@ -1,5 +1,6 @@
 ﻿using DesignPatternConsole.Adapter;
 using DesignPatternConsole.COR;
+using DesignPatternConsole.Flyweight;
 using DesignPatternConsole.Patterns.Builder;
 using DesignPatternConsole.Patterns.Command;
 using DesignPatternConsole.Patterns.CommandFactory;
@@ -210,6 +211,24 @@ namespace DesignPatternConsole
             #endregion
 
             Console.WriteLine("----------------------");
+
+            #region Prototype
+            Console.WriteLine("Flyweight Pattern:");
+
+            Flyweight.ShapeFactory shapeFactory = new ShapeFactory();
+            IShape shape1 = shapeFactory.GetShapeToDisplay(ShapeType.Circle);
+            shape1.DrawShape();
+            IShape shape2 = shapeFactory.GetShapeToDisplay(ShapeType.Rectangle);
+            shape2.DrawShape();
+            IShape shape3 = shapeFactory.GetShapeToDisplay(ShapeType.Circle);
+            shape3.DrawShape();
+            IShape shape4 = shapeFactory.GetShapeToDisplay(ShapeType.Rectangle);
+            shape4.DrawShape();
+
+            Console.WriteLine("Number of created shapes: {0}", shapeFactory.ObjectsCount);
+            #endregion
+
+
 
             Console.ReadKey();
 
