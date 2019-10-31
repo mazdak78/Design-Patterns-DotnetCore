@@ -196,6 +196,21 @@ namespace DesignPatternConsole
 
             Console.WriteLine("----------------------");
 
+            #region Prototype
+            Console.WriteLine("Prototype Pattern:");
+
+            Prototype.CustomerType1 c = new Prototype.CustomerType1("John");
+            Console.WriteLine("First time, Customer Name: {0}", c.Name);
+
+            Prototype.CustomerType1 customerType1 = (Prototype.CustomerType1)c.Clone();
+            customerType1.Name = "Jared";
+            Console.WriteLine("Cloned Customer, Name: {0}", customerType1.Name);
+            Console.WriteLine("Second time, Customer Name: {0}", c.Name);
+
+            #endregion
+
+            Console.WriteLine("----------------------");
+
             Console.ReadKey();
 
         }
