@@ -16,6 +16,7 @@ Some examples of Design patterns in C#. I gather these examples during time and 
 - Adapter Design Pattern
 - Proxy Design Pattern
 - Decorator Design Pattern
+- Flyweight Design Pattern
 
 ### Behavioral patterns
 - Template Design Pattern
