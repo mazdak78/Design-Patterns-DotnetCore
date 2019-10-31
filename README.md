@@ -9,6 +9,7 @@ Some examples of Design patterns in C#. I gather these examples during time and 
 - Factory Design Pattern
 - Singleton Design Pattern
 - Builder Design Pattern
+- Prototype Design Pattern
 
 ### Structural patterns
 - Facade Design Pattern
