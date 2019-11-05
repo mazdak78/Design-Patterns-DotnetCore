@@ -24,6 +24,7 @@ Some examples of Design patterns in C#. I gather these examples during time and 
 - Strategy Design Pattern
 - Observer Design Pattern
 - Chain of Responsibility Design Pattern
+- State Design Pattern
 
 ### Others
 - Command-Factory Design Pattern
