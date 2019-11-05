@@ -212,7 +212,7 @@ namespace DesignPatternConsole
 
             Console.WriteLine("----------------------");
 
-            #region Prototype
+            #region Flyweight
             Console.WriteLine("Flyweight Pattern:");
 
             Flyweight.ShapeFactory shapeFactory = new ShapeFactory();
@@ -228,7 +228,25 @@ namespace DesignPatternConsole
             Console.WriteLine("Number of created shapes: {0}", shapeFactory.ObjectsCount);
             #endregion
 
+            Console.WriteLine("----------------------");
 
+            #region State
+            Console.WriteLine("State Pattern:");
+
+            State.LeadContext leadContext = new State.LeadContext(new State.ConcreteState1());
+
+            leadContext.GetStateName();
+            leadContext.GoToPrevState();
+            leadContext.GoToNextState();
+
+            leadContext.GetStateName();
+            leadContext.GoToNextState();
+
+            leadContext.GetStateName();
+
+            #endregion
+
+            Console.WriteLine("----------------------");
 
             Console.ReadKey();
 
